@@ -1,8 +1,8 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 
-CLIENT_ID = "343a3a4712f74593bd10766a6fb63694"
-CLIENT_SECRET = "9d4dea3ef625415ea776748fb875e42e"
+CLIENT_ID = "client id"
+CLIENT_SECRET = "client secret"
 REDIRECT_URI = "http://127.0.0.1:8888/callback/"
 
 
@@ -65,4 +65,5 @@ for i in range(0, len(track_ids), 100):
     sp.playlist_add_items(playlist_id, track_ids[i:i + 100])
 
 print(f"✅ Playlist '{playlist_name}' created with {len(track_ids)} tracks!")
+
 print(f"🔗 Open in Spotify: {playlist['external_urls']['spotify']}")
